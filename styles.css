@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+
+.container{
+    height: 100%;
+    animation-duration: 7s;
+    animation-name: change;
+    animation-iteration-count: infinite;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@keyframes change {
+   from {
+       background-image: url(./img/morningg.jpg);
+   }
+
+   to {
+       background-image: url(./img/night.jpg);
+   }
+}
+
+#rocket{
+    height: 350px;
+    width: 300px;
+    position: absolute;
+    animation-name: rockett;
+    background-image: url('https://openclipart.org/download/259067/1471494616.svg');
+    background-size: 300px 300px;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    z-index: 2;
+    animation-timing-function: linear;
+}
+
+/* @keyframes rockett {
+   from {
+    right: 50%;
+    top: 50%;
+   }
+   to {
+       right: 0%;
+       top: 0%;
+   }
+} */
+
+@keyframes rockett {
+   0% {right: 100%; top: 30%; opacity: 1;}
+   90% {transform: rotate(360deg); right: 0%; top: 0%; opacity: 1;} 
+   100% {opacity: 0;}
+}
+
+#portal{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    background-image: url('./img/Black-Hole.svg');
+    right: 0%;
+    animation-name: portall;
+    animation-duration: 7s;
+}
+
+@keyframes portall {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
